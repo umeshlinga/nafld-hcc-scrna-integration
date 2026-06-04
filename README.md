@@ -116,3 +116,23 @@ NAFLD affects 1 in 4 adults globally and can progress to hepatocellular carcinom
 **Umesh Linga**  
 M.S. Bioinformatics, Indiana University Indianapolis  
 [GitHub](https://github.com/umeshlinga) | [Email](mailto:umesh.linga25@gmail.com)
+
+
+---
+
+## Results Gallery
+
+### UMAP — Integrated Human Liver (~60,000 cells)
+![UMAP Panel](results/figures/umap_panel.png)
+
+### Differential Expression — Hepatocytes | HCC vs Healthy
+![Volcano Plot](results/figures/volcano_HCC_vs_Healthy.png)
+
+### Cell Type Composition: Healthy → NAFLD → HCC
+![Cell Composition](results/figures/cell_composition.png)
+
+### ML Biomarker Classification (5-fold Nested CV)
+![ML Results](results/figures/ml_model_comparison.png)
+
+### KEGG Pathway Enrichment — HCC vs Healthy
+![Pathway Enrichment](results/figures/pathway_enrichment.png)
