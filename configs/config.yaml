@@ -1,0 +1,31 @@
+project:
+  name: NAFLD_HCC_scRNAseq_Integration
+  version: 1.0.0
+  datasets:
+    healthy:
+      geo_accession: GSE124395
+      description: Human liver cell atlas - 9 healthy donors
+      paper: Aizarani et al. Nature 2019
+    disease:
+      geo_accession: GSE189175
+      description: Human NAFLD-HCC liver snRNA-seq
+      paper: Genome Medicine 2022
+qc:
+  min_genes: 200
+  max_genes: 6000
+  max_mito_pct: 20.0
+  min_counts: 500
+  scrublet_threshold: 0.25
+preprocessing:
+  n_top_genes: 3000
+  n_pcs: 50
+  n_neighbors: 15
+  harmony_batch_key: dataset
+clustering:
+  resolution_range: [0.2, 0.4, 0.6, 0.8, 1.0, 1.2]
+  final_resolution: 0.6
+  method: leiden
+ml:
+  models: [random_forest, xgboost, lightgbm, svm, logistic_regression]
+  cv_folds: 5
+  random_state: 42
